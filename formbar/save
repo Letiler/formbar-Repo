@@ -1,0 +1,20 @@
+@app.route('/sfx')
+def sfx():
+    resString = '<h2>List of available sound files:</h2><ul>'
+    for key, value in mydic.items() :
+        resString += '<li>' + key + '</li>'
+    resString += '</ul> You can play them by using \'/sfx?file=<b>\<sound file name\>'
+    return resString
+
+
+    '''
+        Working modes:
+        thumbs - Students react with up/down/wiggle to signal positive/negative/neutral responses
+        playtime - Minor functions called by REST API are unlocked
+        blockchest - Students can send "pixels" matching Minecraft blockid's to the bar
+        Hypothetical modes:
+        survey - too buggy to work. Students react with A/B/C/D
+        essay - submit "throwaway" essays to be reviewed on screen
+        quiz - currently holds one multiple choice quiz question which students can answer. needs to pull from csv
+        kahoot - proxies kahoot answers to a quiz of your choice (doesn't exist)
+    '''
